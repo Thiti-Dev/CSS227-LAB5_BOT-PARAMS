@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head %>
+</head>
+
+<body class="container">
+    <!-- Above -->
+    <div style="width: 430px;right: 1%;position: absolute;">
+        <div class="alert alert-primary" role="alert">
+            Welcome to Simple Interaction By Thiti 60090500410
+        </div>
+    </div>
+    <!-- End Above -->
+    <main>
+        <div style="margin-top: 100px" class="row">
+            <div class="col-12">
+                <div class="float-left mr-2">
+                    <!-- <h2 style="font-weight: normal;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">Husky : <span class="badge badge-dark"><%= query %></span></h2> -->
+                    <% if (query === "wittawin") { %>
+                        <h2 style="font-weight: normal;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif"><%= query %> : <span
+                                class="badge badge-dark">สวัสดีครับนักเรียน</span></h2>
+                    <% }else if(query === "bird"){ %>
+                        <h2 style="font-weight: normal;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif"><%= query %> : <span
+                                class="badge badge-dark">Hello i am a bird</span></h2>
+                    <% }else if(query === "dog"){ %>
+                        <h2 style="font-weight: normal;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif"><%= query %> :
+                            <span class="badge badge-dark">Whooppps .... Bog Bog</span></h2>
+                    <% }else{ %>
+                        <h2 style="font-weight: normal;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">ME : <span
+                                class="badge badge-dark"><%= query %></span></h2>
+                    <% } %>
+                </div>
+                <img
+                    class="rounded-circle float-left mr-2" alt="..."
+                    src=<%= picRandomize  %>>
+                <div class="float-left">
+                    <div class="ml-2">
+                        <div class="alert alert-dark text-center" role="alert">
+                            Simple Interaction : Paths Below <img style="width: 10px;"
+                                src="http://cdn.onlinewebfonts.com/svg/img_330091.png" />
+                        </div>
+                        <ul class="list-group text-center">
+                            <li class="list-group-item">http://localhost:5000/</li>
+                            <li class="list-group-item active">http://localhost:<%= curPort %>/speak/<%= query %></li>
+                            <li class="list-group-item">http://localhost:<%= curPort %>/repeat/[word]/[amount]</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

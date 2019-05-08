@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ./partials/head %>
+</head>
+
+<body class="container">
+    <!-- Above -->
+    <div style="width: 430px;right: 1%;position: absolute;">
+        <div class="alert alert-primary" role="alert">
+            Welcome to Simple Interaction By Thiti 60090500410
+        </div>
+    </div>
+    <!-- End Above -->
+    <main>
+        <div style="margin-top: 100px" class="row">
+            <div class="col-12">
+                <div class="float-left">
+                    <h2
+                        style="font-weight: normal;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">
+                        Husky : <span class="badge badge-danger">Page not found</span></h2>
+                    <h2
+                        style="font-weight: normal;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size: 20px">
+                        <span class="badge badge-warning">Please use one of the given url at the right</span>
+                    </h2>
+
+                    <% if (additional) { %>
+                    <h2 style="font-weight: normal;font-family: Georgia, 'Times New Roman', Times, serif;font-size: 20px">
+                        <span class="badge badge-danger"><%= additional %></span>
+                    </h2>
+                    <% } %>
+                </div>
+                <img style="height: 220px; width: 250px"
+                    src="https://banner2.kisspng.com/20180208/xuw/kisspng-siberian-husky-watercolor-painting-wolf-5a7cf72a009088.0005993215181391780023.jpg"
+                    class="rounded float-left" alt="...">
+                <div class="float-left">
+                    <div class="ml-2">
+                        <div class="alert alert-warning text-center" role="alert">
+                            !Simple Interaction : Please Paths Below <img style="width: 10px;"
+                                src="http://cdn.onlinewebfonts.com/svg/img_330091.png" />
+                        </div>
+                        <ul class="list-group text-center">
+                            <li class="list-group-item">http://localhost:5000/</li>
+                            <li class="list-group-item">
+                                http://localhost:<%= curPort %>/speak/<%= query %></li>
+                            <% if (additional === "Amount should be only number") { %>
+                            <li style="background-color: red" class="list-group-item">http://localhost:<%= curPort %>/repeat/[word]/[!NUMBER]</li>
+                            <% }else{ %>
+                                <li class="list-group-item">http://localhost:<%= curPort %>/repeat/[word]/[amount]</li>
+                            <% } %>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

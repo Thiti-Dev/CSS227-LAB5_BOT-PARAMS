@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ./partials/head %>
+</head>
+
+<body class="container">
+    <!-- Above -->
+    <div style="width: 430px;right: 1%;position: absolute;">
+        <div class="alert alert-primary" role="alert">
+            Welcome to Simple Interaction By Thiti 60090500410
+        </div>
+    </div>
+    <!-- End Above -->
+    <main>
+        <div style="margin-top: 100px" class="row">
+            <div class="col-12">
+                <div class="float-left">
+                    <h2 style="font-weight: normal;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">Husky : <span
+                            class="badge badge-danger">Please enter any parameters</span></h2>
+                    <h2 style="font-weight: normal;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size: 20px"><span
+                            class="badge badge-warning">Example : http://localhost:<%= curPort %>/speak/text</span></h2>
+                </div>
+                <img style="height: 280px;"
+                    src="https://png.pngtree.com/element_origin_min_pic/17/08/14/46f1e2e68a23f78302530ea6f991f659.jpg"
+                    class="rounded float-left" alt="...">
+                <div class="float-left">
+                    <div class="ml-2">
+                        <div class="alert alert-dark text-center" role="alert">
+                            Simple Interaction : Paths Below <img style="width: 10px;"
+                                src="http://cdn.onlinewebfonts.com/svg/img_330091.png" />
+                        </div>
+                        <ul class="list-group text-center">
+                            <li class="list-group-item">http://localhost:5000/</li>
+                            <li style="background-color: red" class="list-group-item active">http://localhost:<%= curPort %>/speak/<%= query %></li>
+                            <li class="list-group-item">http://localhost:<%= curPort %>/repeat/[word]/[amount]</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
